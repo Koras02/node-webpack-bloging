@@ -1,7 +1,9 @@
 const express = require("express");
 const path = require("path");
+const dotenv = require("dotenv");
 
-require("dotenv").config();
+// .env folder
+dotenv.config({ path: path.resolve(__dirname, "../secret/.env") });
 
 const app = express();
 const PORT = process.env.SERVER_PORT;
